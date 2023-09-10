@@ -16,7 +16,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ conversation }) => {
   // console.log(conversation);
   const { members } = useActiveList();
-  const isActive = members.indexOf(otherUser?.email) !== -1;
+  const isActive = members.indexOf(otherUser.email) !== -1;
   const otherUser = useOtherUser(conversation);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const statustext = useMemo(() => {
