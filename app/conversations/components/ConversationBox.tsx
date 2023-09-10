@@ -21,6 +21,7 @@ const ConversationBox: React.FC<ConversationBoxProps> = ({
   const otherUser = useOtherUser(data);
 
   const handleClick = useCallback(() => {
+    console.log("GOiNG TO CONVERSATION/DATA.ID");
     router.push(`/conversations/${data.id}`);
   }, [data.id, router]);
 

@@ -28,13 +28,15 @@ const ProfileDrawer: React.FC<ProfileDrawerProps> = ({
   const title = useMemo(() => {
     return data.name || otherUser.name;
   }, [data.name, otherUser.name]);
+  const { members } = useActiveList();
+  const isActive = members.indexOf(otherUser?.email) !== -1;
 
   const statusText = useMemo(() => {
     if (data.isGroup) {
       return `${data.users.length} Members`;
     }
-    return "Active";
-  }, [data]);
+    return isActive ? "Active" : "Offline";
+  }, [data, isActive]);
   return (
     <>
       <ConfirmModal
