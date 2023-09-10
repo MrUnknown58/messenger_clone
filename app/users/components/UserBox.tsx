@@ -10,6 +10,7 @@ import { useCallback, useState } from "react";
 interface UserBoxProps {
   data: User;
 }
+
 const UserBox: React.FC<UserBoxProps> = ({ data }) => {
   const router = useRouter();
   const [isLoading, setisLoading] = useState(false);
