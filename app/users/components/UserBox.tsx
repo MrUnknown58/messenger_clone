@@ -23,7 +23,7 @@ const UserBox: React.FC<UserBoxProps> = ({ data }) => {
       .finally(() => {
         setisLoading(false);
       });
-  }, []);
+  }, [data.id, router]);
   return (
     <>
       {isLoading && <LoadingModal />}
