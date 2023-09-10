@@ -10,7 +10,7 @@ import { pusherClient } from "@/app/libs/pusher";
 import { find } from "lodash";
 
 interface BodyProps {
-  initialMessages: FullMessageType;
+  initialMessages: FullMessageType[];
 }
 const Body: React.FC<BodyProps> = ({ initialMessages = [] }) => {
   const [messages, setMessages] = useState(initialMessages);

@@ -15,7 +15,7 @@ import Button from "../../Button";
 interface SettingModalProps {
   currentUser: User;
   isOpen?: boolean;
-  onClose?: () => void;
+  onClose: () => void;
 }
 const SettingsModal: React.FC<SettingModalProps> = ({
   currentUser,

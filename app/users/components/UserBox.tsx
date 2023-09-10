@@ -8,7 +8,7 @@ import { useRouter } from "next/navigation";
 import { useCallback, useState } from "react";
 
 interface UserBoxProps {
-  item: User;
+  data: User;
 }
 const UserBox: React.FC<UserBoxProps> = ({ data }) => {
   const router = useRouter();

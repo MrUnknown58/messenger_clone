@@ -9,6 +9,7 @@ import { useMemo, Fragment, useState } from "react";
 import { IoClose, IoTrash } from "react-icons/io5";
 import ConfirmModal from "./modals/ConfirmModal";
 import AvatarGroup from "@/app/components/AvatarGroup";
+import useActiveList from "@/app/hooks/useActiveList";
 
 interface ProfileDrawerProps {
   data: Conversation & { users: User[] };

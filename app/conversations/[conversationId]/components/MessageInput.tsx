@@ -10,7 +10,7 @@ interface MessageInputProps {
   register: UseFormRegister<FieldValues>;
   errors: FieldErrors;
 }
-const MessageInput = ({
+const MessageInput: React.FC<MessageInputProps> = ({
   placeholder,
   id,
   type,

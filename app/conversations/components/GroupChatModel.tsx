@@ -4,6 +4,7 @@ import Button from "@/app/components/Button";
 import Modal from "@/app/components/Modal";
 import Input from "@/app/components/inputs/Input";
 import Select from "@/app/components/inputs/Select";
+import { User } from "@prisma/client";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -13,7 +14,7 @@ import toast from "react-hot-toast";
 interface GroupChatModelProps {
   isOpen?: boolean;
   onClose: () => void;
-  users: Users[];
+  users: User[];
 }
 const GroupChatModel: React.FC<GroupChatModelProps> = ({
   isOpen,
@@ -59,6 +60,7 @@ const GroupChatModel: React.FC<GroupChatModelProps> = ({
             </p>
             <div className="mt-10 flex flex-col gap-y-8">
               <Input
+                disabled={isLoading}
                 label="Name"
                 id="name"
                 register={register}
